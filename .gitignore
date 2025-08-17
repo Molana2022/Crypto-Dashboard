@@ -1,9 +1,5 @@
 .vscode/
 
-.DS_Store
-Thumbs.db
 
-
-
-assets/js/first.js
+js/first.js
 
