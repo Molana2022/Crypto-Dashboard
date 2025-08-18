@@ -20,11 +20,25 @@ html {
   --cd-bg-dashboard: var(--black);
 }
 
-body {
-  background-color: var(--cd-bg-page);
-  color: #fff;
+/* reliable sizing */
+*, *::before, *::after { 
+  box-sizing: border-box;
+ }
+
+/* fluid media */
+img, svg, video, canvas { 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
 }
 
+/* prevent horizontal scroll from long words/URLs */
+body { 
+  overflow-wrap: anywhere;
+  background-color: var(--cd-bg-page);
+  color: #fff;
+ }
+/* ---------------------------------------------- */
 .app {
   display: flex;
   gap: 20px;
@@ -64,8 +78,6 @@ body {
 }
 
 /* Content of Main area */
-
-
 .cd-header__inner {
   max-width: 1200px;
   margin-inline: auto;
@@ -212,11 +224,15 @@ button.cd-nav__link {
   padding: 0 10px;
 }
 
-#main {}
+#main {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
 .main__inner {
   display: flex;
-  gap: 150px;
-  margin-bottom: -10px;
+  gap: 100px;
+  margin-bottom: -70px;
 }
 
 .wallet-value {
@@ -228,11 +244,11 @@ h1 {
   color: #fff;
   font-weight: 400;        
   font-synthesis: none; 
-    margin-bottom: 0;
+  margin-bottom: 0;
   padding-bottom: 0;   
 }
 
-.wallet-value label {
+.wallet-value .wallet-value-amount {
   font-size: 2.5rem;
   font-weight: 600; 
 }
@@ -275,7 +291,7 @@ h1 {
 }
 
 .duration {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .cd-duration {
@@ -288,6 +304,7 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 30px;
+  width: 55px;
   padding: 0 15px;
   margin: 0 2px;
   border-radius: 8px;
@@ -311,12 +328,14 @@ h1 {
   display: flex;
   gap: 5px;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 .analyse-item {
   background-color: var(--eerie-black);
   border-radius: 8px;
   padding: 10px;
-  flex: 1;
+  flex: 1 1 15%;
+  box-sizing: border-box;
 }
 .analyse-item-name {
   font-size: 0.9rem;
@@ -415,6 +434,10 @@ h1 {
   color: #fff; 
 }
 
+.mobile-only {
+  display: none;
+}
+
 .portfolio {
   display: flex;
   gap: 50px; 
@@ -472,11 +495,15 @@ h1 {
 
 .transactions {
   margin-top: 20px;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 50px;
 }
 .transactions-title {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
+  padding-top:17px; 
 }
 
 .transactions-title h2 {
@@ -492,24 +519,20 @@ h1 {
   padding: 0 50px;
 }
 
-.transactions-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
 .transactions-list-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
 }
 
 .transaction-list-item {
-  flex: 1;
-  padding: 20px;
+  flex: 0 0 45%;
+  padding: 15px;
   align-self: flex-start;
   background-color: var(--eerie-black);
   border-radius: 8px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .transaction-name {
@@ -565,13 +588,51 @@ h1 {
   color:  red; 
 }
 
-
-/* Mobile */
-@media (max-width: 768px) {
-    
+/* === Responsive breakpoints === */
+@media (max-width: 1200px) { /* lg */ }
+@media (max-width: 992px)  { /* md */ }
+@media (max-width: 768px)  { 
+  /* sm: tablets/large phones */
   .app {
     flex-direction: column;
     margin: 20px;
+    }
+
+  .cd-header__inner {
+    max-width: 700px;
+    margin-inline: auto;
+    height: 56px;
+    padding: 0 7px;
+    justify-content: center;
+    gap: 2px;
+  }
+
+  .main__inner {
+    flex-direction: column;
+    margin-bottom: 0px;
+    gap: 0px;
+
+  }
+  .wallet-value-amount {
+    font-size: 0.5rem;
+  }
+   .wallet-value h1 {
+    font-size: 1.1rem;
+  }
+  .add {
+    margin-button: 0px;
+    background-color: var(--eerie-black);
+    }
+
+  .duration {
+    margin-bottom: 0px;
+  }
+
+  .cd-duration {
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-start;
+    padding-left: 0px;
     }
 
   .main-area, .sidebar {
@@ -587,4 +648,84 @@ h1 {
   .cd-nav {
     display: none;
   }
+
+  .cd-header__inner {
+    padding: 0px;
+    align-items: left;          
+    justify-content: flex-start;
+  }
+
+  .chart-analyse__inner {
+    padding: 0;
+    padding-top: 5px;
+  }
+
+  .analyse-item {
+    flex: 1 1 40% !important;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .portfolio {
+  padding-left: 10px;
+  }
+
+  .portfolio-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .portfolio-text .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .portfolio-text .subtitle {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #ccc;
+    margin-top: 4px;
+  }
+
+  .progress-bar {
+    width: 96%;
+    height: 20px; 
+    background-color: var(--eerie-black); 
+    overflow: hidden;
+    align-self: center;
+    padding: 0 10px;
+  }
+
+  .progress-text {
+    padding-left: 10px;
+    width: 95%; 
+    }
+
+  .transactions-title {
+    padding-left: 20px;
+  }
+
+  .transactions-list-row {
+    gap: 10px;
+    padding-left: 50px;
+    padding-button: 50px;
+    margin-button: 50px;
+  }
+
+  .transaction-list-item {
+    flex: 0 0 29%;
+    padding: 5px;
+  }
+
+
 }
+
+@media (max-width: 480px)  { /* xs: small phones */ }
+

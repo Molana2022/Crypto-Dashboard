@@ -64,7 +64,30 @@
             <div class="main__inner">
                 <div class="wallet-value">
                     <h1>Wallet Value</h1>
-                    <label>$41,812.14</label>
+                    <div class="wallet-value-amount">$41,812.14</div>
+
+                    <div class="sidebar__inner">
+                        <div class="cd-toolbar mobile-only" role="search">
+                            <button class="cd-btn cd-btn--do-search" aria-label="Search">
+                                <svg class="cd-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z"
+                                        fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <input id="asset-search" class="cd-input" type="search"
+                                placeholder="Search asset (e.g., BTC, ETH)" autocomplete="off" />
+                            <button class="cd-btn cd-btn--notification" aria-label="Notifications">
+                                <svg class="cd-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M15 17h5l-1.405-1.405C18.21 14.79 18 14.407 18 14V11a6 6 0 10-12 0v3c0 .407-.21.79-.595 1.595L4 17h5m6 0a3 3 0 11-6 0m6 0H9"
+                                        fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="cd-badge"></span>
+                            </button>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="main-right">
                     <div class="add">
@@ -177,7 +200,7 @@
     <div class="sidebar">
 
         <div class="sidebar__inner">
-            <div class="cd-toolbar" role="search">
+            <div class="cd-toolbar desktop-only" role="search">
                 <button class="cd-btn cd-btn--do-search" aria-label="Search">
                      <svg class="cd-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z"
@@ -220,186 +243,185 @@
                 <h2>Transactions</h2>
                 <div class="all">View All</div>
             </div>
-            <div class="transactions-list">
-                <div class="transactions-list-row">
-                    <div class="transaction-list-item">
-                        <div class="transaction-name">
-                            <div class="transaction-icon">
-                                <!-- Bitcoin Icon SVG -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
-                                <circle cx="16" cy="16" r="16" fill="#f7931a"/>
-                                <path fill="#fff" d="M22.588 13.742c.31-2.078-1.271-3.193-3.439-3.939l.703-2.822-1.717-.428-.684 2.746c-.451-.113-.915-.219-1.377-.324l.69-2.765-1.717-.428-.703 2.822c-.374-.085-.741-.168-1.098-.256l.002-.009-2.367-.589-.457 1.828s1.271.291 1.244.309c.694.173.819.634.798 1l-.799 3.196c.048.012.11.029.179.055-.057-.014-.118-.029-.181-.044l-1.121 4.487c-.085.212-.301.531-.787.41.017.024-1.244-.31-1.244-.31l-.854 1.968 2.235.557c.416.104.824.213 1.226.315l-.711 2.854 1.717.428.703-2.822c.468.127.923.245 1.369.355l-.701 2.81 1.717.428.711-2.846c2.929.555 5.129.331 6.054-2.317.747-2.132-.037-3.363-1.578-4.165 1.123-.259 1.967-1.002 2.193-2.537zm-3.924 5.539c-.531 2.132-4.126.979-5.289.69l.944-3.774c1.162.29 4.903.863 4.345 3.084zm.533-5.572c-.485 1.944-3.478.956-4.448.714l.856-3.423c.97.242 4.103.694 3.592 2.709z"/>
-                                </svg>
-                            </div>
-                            <div class="transaction-title">
-                                <div class="transaction-title-value">Recieve</div>
-                                <div class="transaction-time">08:21 AM</div>
-                            </div>
+            <div class="transactions-list-row">
+                <div class="transaction-list-item">
+                    <div class="transaction-name">
+                        <div class="transaction-icon">
+                            <!-- Bitcoin Icon SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
+                            <circle cx="16" cy="16" r="16" fill="#f7931a"/>
+                            <path fill="#fff" d="M22.588 13.742c.31-2.078-1.271-3.193-3.439-3.939l.703-2.822-1.717-.428-.684 2.746c-.451-.113-.915-.219-1.377-.324l.69-2.765-1.717-.428-.703 2.822c-.374-.085-.741-.168-1.098-.256l.002-.009-2.367-.589-.457 1.828s1.271.291 1.244.309c.694.173.819.634.798 1l-.799 3.196c.048.012.11.029.179.055-.057-.014-.118-.029-.181-.044l-1.121 4.487c-.085.212-.301.531-.787.41.017.024-1.244-.31-1.244-.31l-.854 1.968 2.235.557c.416.104.824.213 1.226.315l-.711 2.854 1.717.428.703-2.822c.468.127.923.245 1.369.355l-.701 2.81 1.717.428.711-2.846c2.929.555 5.129.331 6.054-2.317.747-2.132-.037-3.363-1.578-4.165 1.123-.259 1.967-1.002 2.193-2.537zm-3.924 5.539c-.531 2.132-4.126.979-5.289.69l.944-3.774c1.162.29 4.903.863 4.345 3.084zm.533-5.572c-.485 1.944-3.478.956-4.448.714l.856-3.423c.97.242 4.103.694 3.592 2.709z"/>
+                            </svg>
                         </div>
-                        <div class="transaction-amount">
-                            <div class="transaction-type">BTC</div>
-                            <div class="transaction-value">+0.002345</div>
-                            <div class="transaction-status">
-                                <div class="transaction-status-icon">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
-                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
-                                    <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="transaction-status-text">Pending</div>
-                            </div>
+                        <div class="transaction-title">
+                            <div class="transaction-title-value">Recieve</div>
+                            <div class="transaction-time">08:21 AM</div>
                         </div>
                     </div>
-                    <div class="transaction-list-item">
-                        <div class="transaction-name">
-                            <div class="transaction-icon">
-                                <svg width="48" height="48" viewBox="0 0 64 64">
-                                <circle cx="32" cy="32" r="32" fill="#f7931a"/>
-                                <path fill="#fff" d="M20,32c0-6,8-6,8,0s-8,6-8,0z M36,32c0-6,8-6,8,0s-8,6-8,0z" />
-                                <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
-                                        font-size="24" fill="#f7931a">∞</text>
-                                <text x="50%" y="50%" dy="0.1em" text-anchor="middle" dominant-baseline="central"
-                                        font-size="16" fill="#fff">₿</text>
-                                </svg>
-                            </div>
-                            <div class="transaction-title">
-                                <div class="transaction-title-value">Send</div>
-                                <div class="transaction-time">05.12.2025</div>
-                            </div>
-                        </div>
-                        <div class="transaction-amount">
-                            <div class="transaction-type">SOL</div>
-                            <div class="transaction-value">-23.42</div>
-                            <div class="transaction-status">
-                                <div class="transaction-status-icon">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
-                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
-                                    <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="transaction-status-text">Pending</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="transactions-list-row">
-                    <div class="transaction-list-item">
-                        <div class="transaction-name">
-                            <div class="transaction-icon">
-                                <svg width="48" height="48" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="50" fill="#006aff"/>
-                                <path fill="#fff" d="M35,50 l15,-12 l15,12 l-15,12 z" transform="rotate(90 50 50)"/>
-                                </svg>
-                            </div>
-                            <div class="transaction-title">
-                                <div class="transaction-title-value">Reward</div>
-                                <div class="transaction-time">05:19 AM</div>
-                            </div>
-                        </div>
-                        <div class="transaction-amount">
-                            <div class="transaction-type">ETH</div>
-                            <div class="transaction-value">+3.21</div>
-                            <div class="transaction-status">
-                                <div class="transaction-status-icon"><svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
+                    <div class="transaction-amount">
+                        <div class="transaction-type">BTC</div>
+                        <div class="transaction-value">+0.002345</div>
+                        <div class="transaction-status">
+                            <div class="transaction-status-icon">
+                                <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
                                 <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
                                 <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                </div>
-                                <div class="transaction-status-text">Confirmed</div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="transaction-list-item">
-                        <div class="transaction-name">
-                            <div class="transaction-icon">
-                                <svg width="48" height="48" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="50" fill="#009688"/>
-                                <rect x="30" y="30" width="15" height="15" fill="#fff"/>
-                                <rect x="55" y="30" width="15" height="15" fill="#fff"/>
-                                <rect x="42.5" y="55" width="15" height="15" fill="#fff"/>
-                                <line x1="37.5" y1="45" x2="50" y2="55" stroke="#fff" stroke-width="3"/>
-                                <line x1="62.5" y1="45" x2="50" y2="55" stroke="#fff" stroke-width="3"/>
-                                </svg>
-                            </div>
-                            <div class="transaction-title">
-                                <div class="transaction-title-value">Recieve</div>
-                                <div class="transaction-time">05.12.2025</div>
-                            </div>
-                        </div>
-                        <div class="transaction-amount">
-                            <div class="transaction-type">MATIC</div>
-                            <div class="transaction-value">+590.41</div>
-                            <div class="transaction-status">
-                                <div class="transaction-status-icon">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
-                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
-                                    <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="transaction-status-text">Confirmed</div>
-                            </div>
+                            <div class="transaction-status-text">Pending</div>
                         </div>
                     </div>
                 </div>
-                <div class="transactions-list-row">
-                    <div class="transaction-list-item">
-                        <div class="transaction-name">
-                            <div class="transaction-icon">
-                                <svg width="48" height="48" viewBox="0 0 64 64">
-                                <circle cx="32" cy="32" r="32" fill="#FF9800"/>
-                                <path fill="#fff" d="M22 32 L32 22 L32 28 L42 28 L42 36 L32 36 L32 42 Z"/>
-                                </svg>
-                            </div>
-                            <div class="transaction-title">
-                                <div class="transaction-title-value">Recieve</div>
-                                <div class="transaction-time">05.12.2025</div>
-                            </div>
+                <div class="transaction-list-item">
+                    <div class="transaction-name">
+                        <div class="transaction-icon">
+                            <svg width="48" height="48" viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="32" fill="#f7931a"/>
+                            <path fill="#fff" d="M20,32c0-6,8-6,8,0s-8,6-8,0z M36,32c0-6,8-6,8,0s-8,6-8,0z" />
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+                                    font-size="24" fill="#f7931a">∞</text>
+                            <text x="50%" y="50%" dy="0.1em" text-anchor="middle" dominant-baseline="central"
+                                    font-size="16" fill="#fff">₿</text>
+                            </svg>
                         </div>
-                        <div class="transaction-amount">
-                            <div class="transaction-type">MATIC</div>
-                            <div class="transaction-value">+14.8</div>
-                            <div class="transaction-status">
-                                <div class="transaction-status-icon">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
-                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
-                                    <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="transaction-status-text">Confirmed</div>
-                            </div>
+                        <div class="transaction-title">
+                            <div class="transaction-title-value">Send</div>
+                            <div class="transaction-time">05.12.2025</div>
                         </div>
                     </div>
-                    <div class="transaction-list-item">
-                        <div class="transaction-name">
-                            <div class="transaction-icon">
-                                <svg width="48" height="48" viewBox="0 0 64 64">
-                                <circle cx="32" cy="32" r="32" fill="#673ab7"/>
-                                <rect x="26" y="30" width="12" height="12" fill="#fff" rx="2"/>
-                                <path d="M28,30 v-6 a4,4 0 0 1 8,0 v6" stroke="#fff" stroke-width="3" fill="none"/>
+                    <div class="transaction-amount">
+                        <div class="transaction-type">SOL</div>
+                        <div class="transaction-value">-23.42</div>
+                        <div class="transaction-status">
+                            <div class="transaction-status-icon">
+                                <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
+                                <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <div class="transaction-title">
-                                <div class="transaction-title-value">Send</div>
-                                <div class="transaction-time">14.12.2025</div>
-                            </div>
+                            <div class="transaction-status-text">Pending</div>
                         </div>
-                        <div class="transaction-amount">
-                            <div class="transaction-type">USDT</div>
-                            <div class="transaction-value">-19.57</div>
-                            <div class="transaction-status">
-                                <div class="transaction-status-icon">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" aria-label="failed" role="img" style="color:#7a7a7a">
-                                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
-                                    <path d="M9 9l6 6M15 9l-6 6" fill="none" stroke="currentColor" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="transaction-status-text">Failed</div>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="transactions-list-row"> -->
+                <div class="transaction-list-item">
+                    <div class="transaction-name">
+                        <div class="transaction-icon">
+                            <svg width="48" height="48" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="50" fill="#006aff"/>
+                            <path fill="#fff" d="M35,50 l15,-12 l15,12 l-15,12 z" transform="rotate(90 50 50)"/>
+                            </svg>
+                        </div>
+                        <div class="transaction-title">
+                            <div class="transaction-title-value">Reward</div>
+                            <div class="transaction-time">05:19 AM</div>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <div class="transaction-type">ETH</div>
+                        <div class="transaction-value">+3.21</div>
+                        <div class="transaction-status">
+                            <div class="transaction-status-icon"><svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
+                            <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                             </div>
+                            <div class="transaction-status-text">Confirmed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transaction-list-item">
+                    <div class="transaction-name">
+                        <div class="transaction-icon">
+                            <svg width="48" height="48" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="50" fill="#009688"/>
+                            <rect x="30" y="30" width="15" height="15" fill="#fff"/>
+                            <rect x="55" y="30" width="15" height="15" fill="#fff"/>
+                            <rect x="42.5" y="55" width="15" height="15" fill="#fff"/>
+                            <line x1="37.5" y1="45" x2="50" y2="55" stroke="#fff" stroke-width="3"/>
+                            <line x1="62.5" y1="45" x2="50" y2="55" stroke="#fff" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="transaction-title">
+                            <div class="transaction-title-value">Recieve</div>
+                            <div class="transaction-time">05.12.2025</div>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <div class="transaction-type">MATIC</div>
+                        <div class="transaction-value">+590.41</div>
+                        <div class="transaction-status">
+                            <div class="transaction-status-icon">
+                                <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
+                                <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="transaction-status-text">Confirmed</div>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="transactions-list-row"> -->
+                <div class="transaction-list-item">
+                    <div class="transaction-name">
+                        <div class="transaction-icon">
+                            <svg width="48" height="48" viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="32" fill="#FF9800"/>
+                            <path fill="#fff" d="M22 32 L32 22 L32 28 L42 28 L42 36 L32 36 L32 42 Z"/>
+                            </svg>
+                        </div>
+                        <div class="transaction-title">
+                            <div class="transaction-title-value">Recieve</div>
+                            <div class="transaction-time">05.12.2025</div>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <div class="transaction-type">MATIC</div>
+                        <div class="transaction-value">+14.8</div>
+                        <div class="transaction-status">
+                            <div class="transaction-status-icon">
+                                <svg width="12" height="12" viewBox="0 0 24 24" aria-label="confirmed" role="img" style="color:#7a7a7a">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
+                                <path d="M8.5 12.5 11 15l4.5-5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="transaction-status-text">Confirmed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transaction-list-item">
+                    <div class="transaction-name">
+                        <div class="transaction-icon">
+                            <svg width="48" height="48" viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="32" fill="#673ab7"/>
+                            <rect x="26" y="30" width="12" height="12" fill="#fff" rx="2"/>
+                            <path d="M28,30 v-6 a4,4 0 0 1 8,0 v6" stroke="#fff" stroke-width="3" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="transaction-title">
+                            <div class="transaction-title-value">Send</div>
+                            <div class="transaction-time">14.12.2025</div>
+                        </div>
+                    </div>
+                    <div class="transaction-amount">
+                        <div class="transaction-type">USDT</div>
+                        <div class="transaction-value">-19.57</div>
+                        <div class="transaction-status">
+                            <div class="transaction-status-icon">
+                                <svg width="12" height="12" viewBox="0 0 24 24" aria-label="failed" role="img" style="color:#7a7a7a">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor"/>
+                                <path d="M9 9l6 6M15 9l-6 6" fill="none" stroke="currentColor" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="transaction-status-text">Failed</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
    </div> 
 
