@@ -11,6 +11,10 @@ A static mockup of a Crypto Dashboard showcasing portfolio tracking, transaction
 - Accessible skip links and semantic HTML
 - Static mock, ready to integrate with APIs
 
+## 🌟 Screenshots
+
+![Crypto Dashboard](assets/img/crypto-dashboard.png)
+
 ## 🏗️ Technology Stack
 
 - HTML5 & CSS3
